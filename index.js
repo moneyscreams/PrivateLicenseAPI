@@ -13,6 +13,14 @@ app.get('/listKeys', (req, res) => {
 
 });
 
+app.get('/keys', (req, res) => {
+  fs.readFile("keys.txt", (err, data) => {
+    if (err) throw err;
+    const keys = data.toString();
+    res.send(keys);
+  })
+});
+
 app.listen(5050, () => {
   console.log('server started');
 });
