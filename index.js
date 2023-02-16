@@ -18,7 +18,7 @@ app.get('/keys', (req, res) => {
     if (err) throw err;
     const keys = data.toString();
     res.send(keys);
-  })
+  });
 });
 
 app.listen(5050, () => {
