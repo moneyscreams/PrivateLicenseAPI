@@ -14,7 +14,7 @@ app.get('/listKeys', (req, res) => {
 });
 
 app.get('/keys', (req, res) => {
-  fs.readFile("keys.txt", (err, data) => {
+  fs.readFile("./keys.txt", (err, data) => {
     if (err) throw err;
     const keys = data.toString();
     res.send(keys);
